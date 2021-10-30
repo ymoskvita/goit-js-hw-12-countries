@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass/_example.scss"],"names":[],"mappings":"AAAA,YACE,kBAEF,MACE,YAAA,CACA","file":"src.dda6f754.css","sourceRoot":"../src","sourcesContent":[".card-title {\n  text-align: center;\n}\n.card {\n  display: flex;\n  justify-content: space-around;\n}\n"]}
