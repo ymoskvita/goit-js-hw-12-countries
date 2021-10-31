@@ -1,3 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+body {
+  background-image: url(../images/background.png);
+}
+.input-conteiner,
+.country-list,
+.pnotify {
+  display: flex;
+  justify-content: center;
+}
+.input {
+  border: 2px solid #dfe1e5;
+  border-radius: 5px;
+  display: block;
+  margin: 50px;
+  width: 300px;
+  height: 30px;
+}
 .card-title {
   text-align: center;
 }

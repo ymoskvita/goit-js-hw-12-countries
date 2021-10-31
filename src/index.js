@@ -1,4 +1,6 @@
 import './sass/main.scss';
+import { info, error } from '@pnotify/core';
+import '@pnotify/core/dist/BrightTheme.css';
 import { debounce } from 'lodash';
 import countriesListTpl from './templates/countries-list.hbs';
 import countryCardTpl from './templates/country-info.hbs';
@@ -32,12 +34,19 @@ function renderCountryCard(data) {
     return refs.cardContainer.innerHTML = countriesListTpl(data);
   }
   if (data.length > 10) {
-    return console.log('error >10');
+    return onFetchError(error, 'To many matches found. Please enter more specific query!');
   } else {
-    console.log('error no match');
+    onFetchError(info, 'No matches found!');
   }
 }
 
-function onFetchError(error) {
-  alert('что-то не так');
+function onFetchError(typeInfo ,text) {
+  typeInfo({
+    text: `${text}`,
+    delay: 1000,
+    closerHover: true,
+    animation: 'fade',
+    animateSpeed: 'normal',
+    color: 'red',
+  });
 }
